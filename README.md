@@ -27,18 +27,18 @@ These are two generated sine and cosine signals with a frequency of 50 Hz, with 
 The LMS algorithm aims to update the FIR filter coefficient vector based on the provided reference signal, feedback signal, learning factor and the current coefficient vector.
 #### Mathematical formulas
 The gradient descent algorithm can be written as:
-![Gradient descent algorithm](./images/gradient.png)
+* ![Gradient descent algorithm](./images/gradient.png)
 The reference signal is:
-![Reference signal](./images/reference.png)
+* ![Reference signal](./images/reference.png)
 The filter output is:
-![Output sugnal](./images/output.png)
+* ![Output sugnal](./images/output.png)
 ### Median filter
 Median filter can effectively prevent outburst pulse from interfering.
 #### Mathematical formulas
 Median filter output:
-![Median filter](./images/median.png)
+* ![Median filter](./images/median.png)
 The final output is: 
-![Final output](./images/final.png)
+* ![Final output](./images/final.png)
 ## Bibliography
 To find out more check out the following articles:
 * [Y. Weiting and Z. Runjing, "An Improved Self-Adaptive Filter Based on LMS Algorithm for Filtering 50Hz Interference in ECG Signals," 2007 8th International Conference on Electronic Measurement and Instruments, Xi'an, 2007, pp. 3-874-3-878, doi: 10.1109/ICEMI.2007.4351057.](https://ieeexplore-1ieee-1org-1000007ft0dc2.han.bg.pg.edu.pl/document/4351057)
