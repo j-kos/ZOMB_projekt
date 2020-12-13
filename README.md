@@ -17,7 +17,7 @@ Project is created with:
 You can find all the signals used [here](https://physionet.org/content/ecgiddb/1.0.0/)
 ## Adaptive filter
 ![Filter schema](./images/filter.png)
-## Algorithm
+## Alogorithm
 Our filter consists of two main parts:
 ### FIR filter
 It is an adaptive filter with a learning vector of the coefficients based on the LMS algorithm.
