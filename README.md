@@ -41,4 +41,4 @@ The final output is:
 ![Final output](./images/final.png)
 ## Bibliography
 To find out more check out the following articles:
-*[Y. Weiting and Z. Runjing, "An Improved Self-Adaptive Filter Based on LMS Algorithm for Filtering 50Hz Interference in ECG Signals," 2007 8th International Conference on Electronic Measurement and Instruments, Xi'an, 2007, pp. 3-874-3-878, doi: 10.1109/ICEMI.2007.4351057.](https://ieeexplore-1ieee-1org-1000007ft0dc2.han.bg.pg.edu.pl/document/4351057)
+* [Y. Weiting and Z. Runjing, "An Improved Self-Adaptive Filter Based on LMS Algorithm for Filtering 50Hz Interference in ECG Signals," 2007 8th International Conference on Electronic Measurement and Instruments, Xi'an, 2007, pp. 3-874-3-878, doi: 10.1109/ICEMI.2007.4351057.](https://ieeexplore-1ieee-1org-1000007ft0dc2.han.bg.pg.edu.pl/document/4351057)

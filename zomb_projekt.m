@@ -17,8 +17,12 @@ for m = 1:length(raw_ecg)
     
     t             = linspace(0,1-1/Fs,length(raw_ecg{m})); %podstawa czasu
     
+%     figure()
+%     plot(t, raw_ecg{m}); %wykres surowego sygnału EKG
+%     title(sprintf('Raw ECG data no.%u',m))
+    
     figure()
-    plot(t, raw_ecg{m}); %wykres surowego sygnału EKG
+    plot(t(5000:6000), raw_ecg{m}(5000:6000)); %wykres surowego sygnału EKG
     title(sprintf('Raw ECG data no.%u',m))
     
     amplitude_array = [0.1 2 4 10]; %amplituda szumu
@@ -90,10 +94,13 @@ for m = 1:length(raw_ecg)
             median_filter_output = zomb_median(filtered_ecg,window);
 
             % Wizualizacja danych
-            subplot(4,4,k+((j-1)*4))
-            plot(t, median_filter_output);
+%             subplot(4,4,k+((j-1)*4))
+%             plot(t, median_filter_output);
+%             title(sprintf('Filtered ECG data n = %0.1e, A = %u',n_array(k),amplitude_array(j)));
+            
+            figure
+            plot(t(5000:6000),median_filter_output(5000:6000));
             title(sprintf('Filtered ECG data n = %0.1e, A = %u',n_array(k),amplitude_array(j)));
-
         end
     end
 end
