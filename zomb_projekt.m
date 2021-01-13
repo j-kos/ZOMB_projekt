@@ -90,13 +90,13 @@ for m = 1:length(raw_ecg)
             % Filtr medianowy 
             median_filter_output = zomb_median(filtered_ecg,window);
 
-            figure()
-            plot(t, median_filter_output)
-            title(sprintf('Filtered ECG data n = %0.1e, A = %u',n_array(k),amplitude_array(j)));
-            % Wizualizacja danych
-%             subplot(4,4,k+((j-1)*4))
-%             plot(t, median_filter_output);
+%             figure()
+%             plot(t, median_filter_output)
 %             title(sprintf('Filtered ECG data n = %0.1e, A = %u',n_array(k),amplitude_array(j)));
+            % Wizualizacja danych
+            subplot(4,4,k+((j-1)*4))
+            plot(t, median_filter_output);
+            title(sprintf('Filtered ECG data n = %0.1e, A = %u',n_array(k),amplitude_array(j)));
 
         end
     end
