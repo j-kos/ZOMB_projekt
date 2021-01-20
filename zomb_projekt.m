@@ -9,19 +9,20 @@ fir_length        = 50; % dlugosc filtru
 % raw_ecg{2}        = raw_ecg_mat.raw_ecg;
 % raw_ecg_mat       = load("raw_signal_person9.mat")'; % zaszumiony sygnal EKG -> wejscie
 % raw_ecg{3}        = raw_ecg_mat.raw_ecg;
-raw_ecg_mat       = load("raw_signal_fantasia_signal.mat")'; % zaszumiony sygnal EKG -> wejscie
-raw_ecg{1}        = raw_ecg_mat.signal;
+raw_ecg_mat       = load("raw_signal_fantasia_signal_1.mat")'; % zaszumiony sygnal EKG -> wejscie
+raw_ecg{1}        = raw_ecg_mat.x;
 
 Fs                = 250; %czestotliwoosc probkowania sygnalu
-window            = 10; %wielkość okna filtru medianowego
+window            = 5; %wielkość okna filtru medianowego
 
 for m = 1:length(raw_ecg)
     
-    t             = linspace(0,1-1/Fs,length(raw_ecg{m})); %podstawa czasu
+    t             = linspace(0,length(raw_ecg{m})/Fs,length(raw_ecg{m})); %podstawa czasu
     
     figure()
     plot(t, raw_ecg{m}); %wykres surowego sygnału EKG
     title(sprintf('Raw ECG data no.%u',m))
+    xlabel('Time [s]');
     
     amplitude_array = [0.1 2 4 10]; %amplituda szumu
     n_array         = [5e-2 5e-3 1e-3 1e-4]; %wspolczynnik szybkosci uczenia
@@ -97,6 +98,7 @@ for m = 1:length(raw_ecg)
             subplot(4,4,k+((j-1)*4))
             plot(t, median_filter_output);
             title(sprintf('Filtered ECG data n = %0.1e, A = %u',n_array(k),amplitude_array(j)));
+            xlabel('Time [s]');
 
         end
     end
