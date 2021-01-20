@@ -37,15 +37,13 @@ for i=2:length(ekg)
     filteredSignal(i-1)=ekg(i-1)-noiseEstimator(2);
 end
 filteredSignal(i)=ekg(i)-noiseEstimator(2);
-
+t             = linspace(0,length(ekg)/fs,length(ekg)); %podstawa czasu
 
 figure(1)
-plot(filteredSignal)
+plot(t,filteredSignal)
 title('Denoise ECG');
-xlabel('time');
-ylabel('amplitude');
+xlabel('Time [s]');
 figure(2);
-plot(ekg);
+plot(t, ekg);
 title('Original ECG');
-xlabel('time');
-ylabel('amplitude');
+xlabel('Time [s]');

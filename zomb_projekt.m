@@ -26,7 +26,7 @@ for m = 1:length(raw_ecg)
     
     amplitude_array = [0.1 2 4 10]; %amplituda szumu
     n_array         = [5e-2 5e-3 1e-3 1e-4]; %wspolczynnik szybkosci uczenia
-    noise_freq      = 50; %czestotliwosc szumu
+    noise_freq      = 60; %czestotliwosc szumu
     % Wektory sluzace do testow metody
     % Bedziemy testowac metode dla roznych amplitud oraz wspolczynnikow
     % szybkosci uczenia
@@ -37,10 +37,10 @@ for m = 1:length(raw_ecg)
         for k=1:length(n_array)
 
             % Inizjalizacja wektorow
-            coefficients_sin  = zeros(1,fir_length,"double");
-            ref_sin           = zeros(1,fir_length,"double");
-            coefficients_cos  = zeros(1,fir_length,"double");
-            ref_cos           = zeros(1,fir_length,"double");
+            coefficients_sin  = ones(1,fir_length,"double");
+            ref_sin           = ones(1,fir_length,"double");
+            coefficients_cos  = ones(1,fir_length,"double");
+            ref_cos           = ones(1,fir_length,"double");
 
             filtered_ecg      = zeros(1,length(raw_ecg{m}), "double"); %odszumiony sygnal EKG
 
